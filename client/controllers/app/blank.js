@@ -4,6 +4,8 @@ function app_blank($scope, app, $http) {
     app.init($scope);
     
     $scope.getList = function (){
-        alert($http);
+        $http.get('http://sacnt1011.americas.ad.flextronics.com:7777/Carousel/GetAvailableCarousels').then(function(data){
+            alert(data);
+        });
     }
 }
