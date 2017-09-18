@@ -4,7 +4,9 @@ function app_blank($scope, app, $http) {
     app.init($scope);
     
     $scope.getList = function (){
-        $http.get('http://webapplication320170918045309.azurewebsites.net/api/values').then(function(data){
+        $http.get('http://webapplication320170918045309.azurewebsites.net/api/values',{
+            withCredentials:true
+        }).then(function(data){
             alert(data);
         });
     }
