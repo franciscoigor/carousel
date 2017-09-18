@@ -4,5 +4,6 @@ function app_blank($scope, app, $http) {
     app.init($scope);
     
     $scope.getList = function (){
+        alert($http);
     }
 }
